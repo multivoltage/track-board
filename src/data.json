@@ -4,65 +4,84 @@
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
+            "state": "backlog",
+            "reporter": "toninid",
+            "priority" : -1
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
+            "state": "backlog",
+            "reporter": "toninid",
+            "priority" : 0            
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "todo"
+            "state": "todo",
+            "reporter": "toninid",
+            "priority" : 1
+            
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "todo"
+            "state": "todo",
+            "reporter": "mantovanig",
+            "priority" : 2
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
+            "state": "backlog",
+            "reporter": "mantovanig",
+            "priority" : 2
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "progress"
+            "state": "progress",
+            "reporter": "mantovanig",
+            "priority" : 2
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "progress"
+            "state": "progress",
+            "reporter": "mantovanig",
+            "priority" : 3
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "done"
+            "state": "done",
+            "reporter": "mantovanig",
+            "priority" : 2
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "done"
+            "state": "done",
+            "reporter": "mantovanig",
+            "priority" : 0
         }                        
     ],
 
     "users": [
-        {"username" : "toninid" , "avatar_url" : ""},
-        {"username" : "mantovanig" , "avatar_url" : ""},
-        {"username" : "giorgioa" , "avatar_url" : ""},
-        {"username" : "lello" , "avatar_url" : ""},
-        {"username" : "polettit" , "avatar_url" : ""},
-        {"username" : "bomber" , "avatar_url" : ""}
+        {"username" : "toninid" , "avatar_url" : "https://cdn2.iconfinder.com/data/icons/faceavatars/PNG/D04.png"},
+        {"username" : "mantovanig" , "avatar_url" : "https://cdn2.iconfinder.com/data/icons/faceavatars/PNG/D04.png"},
+        {"username" : "giorgioa" , "avatar_url" : "https://cdn2.iconfinder.com/data/icons/faceavatars/PNG/D04.png"},
+        {"username" : "lello" , "avatar_url" : "https://cdn2.iconfinder.com/data/icons/faceavatars/PNG/D03.png"},
+        {"username" : "polettit" , "avatar_url" : "https://cdn2.iconfinder.com/data/icons/faceavatars/PNG/D03.png"},
+        {"username" : "bomber" , "avatar_url" : "https://cdn2.iconfinder.com/data/icons/faceavatars/PNG/D03.png"}
     ]
 
 }
