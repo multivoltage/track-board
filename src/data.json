@@ -16,7 +16,13 @@
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
+            "state": "todo"
+        },
+        {
+            "title": "look page not aligned",
+            "description": "",
+            "type": "userstory",
+            "state": "todo"
         },
         {
             "title": "look page not aligned",
@@ -28,31 +34,25 @@
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
+            "state": "progress"
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
+            "state": "progress"
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
+            "state": "done"
         },
         {
             "title": "look page not aligned",
             "description": "",
             "type": "userstory",
-            "state": "backlog"
-        },
-        {
-            "title": "look page not aligned",
-            "description": "",
-            "type": "userstory",
-            "state": "backlog"
+            "state": "done"
         }                        
     ],
 
