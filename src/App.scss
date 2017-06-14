@@ -34,6 +34,11 @@ $control-height: 40px;
   
   .state-container {
     flex: 1;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
     
     header {
       background: #E0E0E0;
@@ -46,5 +51,13 @@ $control-height: 40px;
 
   .entity {
     margin: .5em;
+    display: inline !important;
+    
+    &.bug {
+      border-left: 2px solid #F44336;
+    }
+    &.userstory {
+      border-left: 2px solid #03A9F4;
+    }
   }
 }

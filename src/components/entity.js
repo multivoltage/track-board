@@ -5,9 +5,12 @@ import FlatButton from 'material-ui/FlatButton';
 
 export default class Entity extends Component {
   render() {
-    console.log('asdfdfds');
+
+    let classes = "entity ";
+    classes += this.props.type;
+    
     return (
-      <Card className="entity">
+      <Card className={classes}>
         <CardHeader
           title={this.props.title}
           subtitle={this.props.description}
