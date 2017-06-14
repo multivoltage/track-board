@@ -24,7 +24,9 @@ export default class App extends Component {
 
     return STATES.map((state) => {
       return (
-        <StateContainer key={STATES.indexOf(state)} state={state} entities={this.state.entities.filter((entity) => { return entity.state === state })} />
+        <StateContainer key={STATES.indexOf(state)} state={state}
+            entities={this.state.entities.filter((entity) => { return entity.state === state })}
+            users={this.state.users} />
       );
     });
   }

@@ -3,14 +3,15 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
 
-export default class App extends Component {
+export default class Entity extends Component {
   render() {
-
+    console.log('asdfdfds');
     return (
       <Card className="entity">
         <CardHeader
-          title={this.props.entity.title}
-          subtitle=""
+          title={this.props.title}
+          subtitle={this.props.description}
+          avatar={this.props.fullUser.avatar_url}
           actAsExpander={true}
           showExpandableButton={true}
         />

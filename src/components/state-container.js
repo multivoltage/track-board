@@ -10,8 +10,16 @@ export default class StateContainer extends Component {
   }
 
   renderRow(){
-    return this.props.entities.map((entity,index) => {
-      return <Entity key={index} entity={entity}/>
+    return this.props.entities.map((entity,index) => {      
+      return (
+            <Entity key={index}
+                title={entity.title}
+                description={entity.description}
+                type={entity.type}
+                state={entity.state}
+                priority={entity.priority}
+                fullUser={this.props.users.find((user) => entity.reporter === user.username)} />
+      );
     });
   }
 
