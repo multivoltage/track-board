@@ -6,7 +6,8 @@ import './reset.css';
 
 import StateContainer from './components/state-container';
 
-const STATES = ["backlog","todo","progress","testing","done"];
+const STATES = ["progress","testing","done"];
+const URL_API = 'https://raw.githubusercontent.com/multivoltage/track-board/master/src/data.json';
 
 export default class App extends Component {
 
@@ -14,15 +15,34 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      stateLayout: 'colum'
+      stateLayout: 'colum',
+      entities: [],
+      users: []
     };
   }
   renderStateColums(){
+
     return STATES.map((state) => {
       return (
-        <StateContainer key={STATES.indexOf(state)} state={state} />
+        <StateContainer key={STATES.indexOf(state)} state={state} entities={this.state.entities.filter((entity) => { return entity.state === state })} />
       );
     });
+  }
+
+  componentDidMount(){
+    fetch(URL_API)
+      .then((res) => res.json())
+      .then((dataObj) => {
+        //console.log(dataObj);
+        this.setState({
+          entities: dataObj.entities,
+          users: dataObj.users
+        });
+        
+      })
+      .catch((e) => {
+        console.error(e);
+      })
   }
 
   render() {

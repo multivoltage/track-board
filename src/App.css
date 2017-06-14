@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   font-size: large;
   padding-left: 1em;
   padding-right: 1em; }
@@ -34,3 +33,5 @@
       background: #E0E0E0; }
       .states-group .state-container header h1 {
         padding: .5em; }
+  .states-group .entity {
+    margin: .5em; }

@@ -1,7 +1,6 @@
 $control-height: 40px;
 
 .App {
-  text-align: center;
   font-size: large;
   padding-left: 1em;
   padding-right: 1em;
@@ -43,5 +42,9 @@ $control-height: 40px;
         padding: .5em;
       }
     }
+  }
+
+  .entity {
+    margin: .5em;
   }
 }
