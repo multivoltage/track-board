@@ -36,8 +36,9 @@ export default class App extends Component {
       .then((res) => res.json())
       .then((dataObj) => {
         //console.log(dataObj);
+        let entitiesFourTimes = dataObj.entities.concat(dataObj.entities);
         this.setState({
-          entities: dataObj.entities,
+          entities: entitiesFourTimes,
           users: dataObj.users
         });
         

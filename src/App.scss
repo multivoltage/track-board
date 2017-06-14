@@ -35,23 +35,30 @@ $control-height: 40px;
   .state-container {
     flex: 1;
 
-    > div {
+    &--list  {
+      margin-top: .5em;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+
+      > div {
+        display: flex;
+        flex-direction: row;
+      }
     }
     
     header {
       background: #E0E0E0;
       
       h1 {
-        padding: .5em;
+        padding: 1em;
+        text-align: center;
       }
     }
   }
 
+  
   .entity {
     margin: .5em;
-    display: inline !important;
     
     &.bug {
       border-left: 2px solid #F44336;

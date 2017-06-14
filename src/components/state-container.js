@@ -25,16 +25,16 @@ export default class StateContainer extends Component {
 
   render() {
     return (
-      <Paper className="state-container" zDepth={1}>
-        <div>
+      <div className="state-container">
           <header>
             <h1>{this.props.state}</h1>
           </header>
-
-          {this.renderRow()}
-          
-        </div>
-      </Paper>
+          <Paper className="state-container--list" zDepth={1}>
+            <div>
+              {this.renderRow()}
+            </div>
+          </Paper>
+      </div>
     );
   }
 
