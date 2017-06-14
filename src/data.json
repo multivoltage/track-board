@@ -3,7 +3,7 @@
         {
             "title": "look page not aligned",
             "description": "",
-            "type": "userstory",
+            "type": "bug",
             "state": "backlog",
             "reporter": "toninid",
             "priority" : -1
@@ -19,7 +19,7 @@
         {
             "title": "look page not aligned",
             "description": "",
-            "type": "userstory",
+            "type": "bug",
             "state": "todo",
             "reporter": "toninid",
             "priority" : 1
@@ -44,7 +44,7 @@
         {
             "title": "look page not aligned",
             "description": "",
-            "type": "userstory",
+            "type": "bug",
             "state": "progress",
             "reporter": "mantovanig",
             "priority" : 2
