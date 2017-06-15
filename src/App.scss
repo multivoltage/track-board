@@ -1,9 +1,7 @@
 $control-height: 40px;
 
 .App {
-  font-size: large;
-  padding-left: 1em;
-  padding-right: 1em;
+  
 }
 
 .App-logo {
@@ -48,12 +46,19 @@ $control-height: 40px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+
+      .ui.card {
+        margin: .5em;
+        
+        .header {
+          font-size: 1em;
+        }
+      }
     }
   }
 
   
   .entity {
-    margin: .5em;
     
     &.bug {
       border-left: 3px solid #F44336;

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-
+import { Button, Card, Image } from 'semantic-ui-react';
 
 export default class Entity extends Component {
   render() {
@@ -11,21 +9,19 @@ export default class Entity extends Component {
     
     return (
       <Card className={classes}>
-        <CardHeader
-          title={this.props.title}
-          subtitle={this.props.description}
-          avatar={this.props.fullUser.avatar_url}
-          actAsExpander={true}
-          showExpandableButton={true}
-        />
-        <CardActions>
-          <FlatButton label="Action1" />
-          <FlatButton label="Action2" />
-        </CardActions>
-        <CardText expandable={true}>
-          erewrtewrtewrtewrtewrtwertew
-        </CardText>
-      </Card>
+        <Card.Content>
+          <Image floated='right' size='mini' src={this.props.fullUser.avatar_url} />
+          <Card.Header>
+            {this.props.title}
+          </Card.Header>
+          <Card.Meta>
+            // todo
+          </Card.Meta>
+          <Card.Description>
+            {this.props.description}
+          </Card.Description>
+        </Card.Content>
+      </Card>      
     );
   }
 }

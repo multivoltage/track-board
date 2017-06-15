@@ -1,8 +1,3 @@
-.App {
-  font-size: large;
-  padding-left: 1em;
-  padding-right: 1em; }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -38,9 +33,11 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap; }
-  .states-group .entity {
-    margin: .5em; }
-    .states-group .entity.bug {
-      border-left: 3px solid #F44336; }
-    .states-group .entity.userstory {
-      border-left: 3px solid #03A9F4; }
+      .states-group .state-container--list .ui.card {
+        margin: .5em; }
+        .states-group .state-container--list .ui.card .header {
+          font-size: 1em; }
+  .states-group .entity.bug {
+    border-left: 3px solid #F44336; }
+  .states-group .entity.userstory {
+    border-left: 3px solid #03A9F4; }
