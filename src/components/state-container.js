@@ -29,11 +29,9 @@ export default class StateContainer extends Component {
           <header>
             <h1>{this.props.state}</h1>
           </header>
-          <Paper className="state-container--list" zDepth={1}>
-            <div>
+            <div className="state-container--list" >
               {this.renderRow()}
             </div>
-          </Paper>
       </div>
     );
   }

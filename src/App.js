@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//import 'semantic-ui-css/semantic.min.css';
 import logo from './logo.svg';
 import './App.css';
 import './reset.css';

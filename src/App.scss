@@ -34,18 +34,7 @@ $control-height: 40px;
   
   .state-container {
     flex: 1;
-
-    &--list  {
-      margin-top: .5em;
-      display: flex;
-      flex-direction: row;
-
-      > div {
-        display: flex;
-        flex-direction: row;
-      }
-    }
-    
+  
     header {
       background: #E0E0E0;
       
@@ -54,6 +43,12 @@ $control-height: 40px;
         text-align: center;
       }
     }
+
+    &--list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   
@@ -61,10 +56,10 @@ $control-height: 40px;
     margin: .5em;
     
     &.bug {
-      border-left: 2px solid #F44336;
+      border-left: 3px solid #F44336;
     }
     &.userstory {
-      border-left: 2px solid #03A9F4;
+      border-left: 3px solid #03A9F4;
     }
   }
 }

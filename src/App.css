@@ -29,21 +29,18 @@
   height: 100vh; }
   .states-group .state-container {
     flex: 1; }
-    .states-group .state-container--list {
-      margin-top: .5em;
-      display: flex;
-      flex-direction: row; }
-      .states-group .state-container--list > div {
-        display: flex;
-        flex-direction: row; }
     .states-group .state-container header {
       background: #E0E0E0; }
       .states-group .state-container header h1 {
         padding: 1em;
         text-align: center; }
+    .states-group .state-container--list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
   .states-group .entity {
     margin: .5em; }
     .states-group .entity.bug {
-      border-left: 2px solid #F44336; }
+      border-left: 3px solid #F44336; }
     .states-group .entity.userstory {
-      border-left: 2px solid #03A9F4; }
+      border-left: 3px solid #03A9F4; }
