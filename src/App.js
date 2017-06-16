@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Dimmer, Loader } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import logo from './logo.svg';
 import './App.css';
@@ -50,8 +51,12 @@ export default class App extends Component {
 
   render() {
 
+
     return (
       <div className="App">
+        <Dimmer active={this.state.entities.length === 0} inverted>
+          <Loader size='massive'>Loading board</Loader>
+        </Dimmer> 
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Track Board</h2>
