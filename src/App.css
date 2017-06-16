@@ -34,7 +34,7 @@
       flex-direction: row;
       flex-wrap: wrap; }
       .states-group .state-container--list .ui.card {
-        margin: .5em; }
+        margin: .3em; }
         .states-group .state-container--list .ui.card .header {
           font-size: 1em; }
   .states-group .entity.bug {

@@ -58,13 +58,8 @@ export default class App extends Component {
           <h2>Welcome to Track Board</h2>
           <p>This is a sample of track board like TargetProcess</p>
         </div>
-
-        <div className="App-body">
-          <MuiThemeProvider>
-            <div className="states-group" >
-              {this.renderStateColums()}
-            </div>
-          </MuiThemeProvider>
+        <div className="states-group">
+          {this.renderStateColums()}
         </div>
       </div>
     );
