@@ -1,4 +1,6 @@
 $control-height: 40px;
+$primary-color: #009688;
+$primary-color-dark: #00796B;
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -7,7 +9,7 @@ $control-height: 40px;
 }
 
 .App-header {
-  background-color: #222;
+  background-color: $primary-color;
   height: 150px;
   padding: 20px;
   color: white;
@@ -28,13 +30,25 @@ $control-height: 40px;
   
   .state-container {
     flex: 1;
+    border-left: 1px solid $primary-color;
+
+    &:first {
+      border-left: none;
+    }
   
     header {
-      background: #E0E0E0;
+      background: $primary-color;
+      padding: 1em .5em 1em .5em;
+      
+      .ui.label {
+        margin-top: .3em;
+        margin-bottom: .3em;
+      }     
       
       h1 {
-        padding: 1em;
-        text-align: center;
+        font-size: large;
+        color: white;
+        text-transform: uppercase;
       }
     }
 
