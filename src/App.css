@@ -45,25 +45,17 @@
         margin: .3em; }
         .states-group .state-container--list .ui.card .header {
           font-size: 1em; }
+      .states-group .state-container--list.resizable {
+        position: relative; }
+      .states-group .state-container--list .resizer {
+        width: 10px;
+        height: 10px;
+        background: blue;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: se-resize; }
   .states-group .entity.bug {
     border-left: 3px solid #F44336; }
   .states-group .entity.userstory {
     border-left: 3px solid #03A9F4; }
-
-.state-container {
-  background: lime;
-  height: 200px;
-  width: 300px; }
-
-.state-container.resizable {
-  background: cyan;
-  position: relative; }
-
-.state-container .resizer {
-  width: 10px;
-  height: 10px;
-  background: blue;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  cursor: se-resize; }

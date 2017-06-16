@@ -42,7 +42,6 @@ export default class App extends Component {
           entities: entitiesFourTimes,
           users: dataObj.users
         });
-        
       })
       .catch((e) => {
         console.error(e);
