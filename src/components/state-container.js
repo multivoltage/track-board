@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Paper from 'material-ui/Paper';
 import Entity from './entity';
 
 /* we want use this componet for each state that user can create */
