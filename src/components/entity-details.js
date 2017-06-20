@@ -6,12 +6,12 @@ export default class EntityDetails extends Component {
 
   constructor(props){
     super(props);
-    this.state = {
-      entity: null
-    };
   }
 
   componentDidMount(){
+    if(!this.props.entityId)
+      return;
+
     fetch(URL_API)
       .then((res) => res.json())
       .then((dataObj) => {

@@ -8,7 +8,6 @@ import './../reset.css';
 import StateContainer from './state-container';
 
 const STATES = ["progress","testing","done"];
-const URL_API = 'https://raw.githubusercontent.com/multivoltage/track-board/master/src/data.json';
 
 export default class Home extends Component {
 
@@ -33,18 +32,12 @@ export default class Home extends Component {
   }
 
   componentDidMount(){
-    fetch(URL_API)
-      .then((res) => res.json())
-      .then((dataObj) => {
-        //console.log(dataObj);
-        let entitiesFourTimes = dataObj.entities.concat(dataObj.entities);
-        this.setState({
-          entities: entitiesFourTimes,
-          users: dataObj.users
-        });
+    this.props.entitiesPromise()
+      .then((res) => {
+        this.setState({entities: res.entities, users: res.users})
       })
-      .catch((e) => {
-        console.error(e);
+      .catch((reason) => {
+        console.log(reason);
       })
   }
 
