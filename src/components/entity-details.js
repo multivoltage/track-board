@@ -6,35 +6,28 @@ export default class EntityDetails extends Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      entitiy: {}
+    };
   }
 
   componentDidMount(){
-    if(!this.props.entityId)
-      return;
-
-    fetch(URL_API)
-      .then((res) => res.json())
-      .then((dataObj) => {
-        //console.log(dataObj);
-        let entity = dataObj.entities.find((e) => e.id === this.props.entityId);
-        this.setState({
-          entity : entity
-        });
-        console.log(dataObj);
-        console.log(entity);
+    let entity_id = this.props.match.params.number;
+    this.props.entityPromise(1)
+      .then((res) => {
+        this.setState({entitiy: res});
       })
-      .catch((e) => {
-        console.error(e);
-      })
+      .catch((reason) => {
+        console.log(reason);
+      });
   }
 
   render() {
-    console.log(this.state);
       return (
         <div className="entitiy-details">
           <Link to='/'>
             <span className="close">X</span>
-            <span>entity: </span>
+            <span>entity: {this.state.entitiy.title}</span>
           </Link>
         </div>
       );

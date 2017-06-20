@@ -13,9 +13,9 @@ export default class App extends Component {
   render() {
     return (
       <HashRouter>
-        <Switch>
-          <Route exact path='/'  render={() => <Home entitiesPromise={api_helper.GetData}/>} />
-          <Route path='/entities/:number' render={() => <EntityDetails entityId="1"/>} />
+        <Switch>        
+          <Route exact path='/' render={routeProps => <Home {...routeProps} entitiesPromise={api_helper.GetData}/>} />
+          <Route path='/entities/:number' render={routeProps => <EntityDetails {...routeProps} entityPromise={api_helper.GetEntity}/>} />
         </Switch>
       </HashRouter>
     );

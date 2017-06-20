@@ -38,7 +38,7 @@ export default class Home extends Component {
       })
       .catch((reason) => {
         console.log(reason);
-      })
+      });
   }
 
   render() {

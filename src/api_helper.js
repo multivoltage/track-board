@@ -2,7 +2,7 @@ const URL_API = 'https://raw.githubusercontent.com/multivoltage/track-board/mast
 
 const api_helper = {
 
-    GetData: (props) => {
+    GetData: () => {
         // TODO - cache request
         // if(this.entities)
         //     return Promise.resolve(this.entities);
@@ -26,18 +26,13 @@ const api_helper = {
         });
     },
 
-    GetEntity: (props) => {
+    GetEntity: (entity_id) => {
         return new Promise((resolve,reject) => {
             fetch(URL_API)
             .then((res) => res.json())
             .then((dataObj) => {
                 let entities = dataObj.entities.concat(dataObj.entities);
-                let users = dataObj.users;
-                this.data = {
-                    entities: entities,
-                    users: users
-                };
-                let entityFound = entities.find((e) => e.id === this.props.entityId);
+                let entityFound = entities.find((e) => e.id === entity_id);
                 resolve(entityFound);
             })
             .catch((e) => {
