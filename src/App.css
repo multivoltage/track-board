@@ -71,8 +71,6 @@
       font-weight: bold; }
     .entitiy-details header h1 .id {
       margin-left: 1em; }
-    .entitiy-details header h1 .description {
-      line-height: 1.5em; }
 
 .tablayout .tabs {
   display: flex;
@@ -88,3 +86,5 @@
 
 .tablayout .contents {
   margin-top: .8em; }
+  .tablayout .contents .description {
+    line-height: 1.5em; }
