@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Icon, Container, Dimmer, Loader, Divider, Label } from 'semantic-ui-react';
+import { Icon, Container, Dimmer, Loader, Divider, Label, Button } from 'semantic-ui-react';
+import TabsLayout from './tabs-layout';
 
 export default class EntityDetails extends Component {
 
@@ -26,7 +27,7 @@ export default class EntityDetails extends Component {
 
     if(!this.state.entitiy){
       return (
-          <Dimmer active="true">
+          <Dimmer active inverted>
             <Loader size='massive'>Loading entitiy</Loader>
           </Dimmer> 
       );
@@ -47,10 +48,11 @@ export default class EntityDetails extends Component {
               </h1>             
             </header>
             <Divider />   
-            
-            <p className="description">
-              {this.state.entitiy.description}
-            </p>
+            <TabsLayout tabs={["Description","Flow","History"]} selected="Description">
+              <Button tab="Description">tab1</Button>
+              <Button tab="Flow">tab2</Button>
+              <Button tab="History">tab3</Button>
+            </TabsLayout>
           </Container>          
         </div>
     );

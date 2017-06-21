@@ -71,3 +71,20 @@
       font-weight: bold; }
     .entitiy-details header h1 .id {
       margin-left: 1em; }
+    .entitiy-details header h1 .description {
+      line-height: 1.5em; }
+
+.tablayout .tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .tablayout .tabs .tab {
+    padding: .4em; }
+    .tablayout .tabs .tab.selected {
+      color: #00796B;
+      font-weight: bold;
+      background-color: #EEEEEE;
+      border-radius: 5px; }
+
+.tablayout .contents {
+  margin-top: .8em; }

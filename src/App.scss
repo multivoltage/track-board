@@ -1,6 +1,7 @@
 $control-height: 40px;
 $primary-color: #009688;
 $primary-color-dark: #00796B;
+$tab-selected: #EEEEEE;
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -101,6 +102,33 @@ $primary-color-dark: #00796B;
       .id {
         margin-left: 1em;
       }
+      .description {
+        line-height: 1.5em;
+      }
     }
+  }
+}
+
+// tab layout
+.tablayout{
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .tab {
+      padding: .4em;
+
+      &.selected {
+        color: $primary-color-dark;
+        font-weight: bold;
+        background-color:$tab-selected;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .contents {
+    margin-top: .8em;
   }
 }
