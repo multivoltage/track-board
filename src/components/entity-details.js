@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-const URL_API = 'https://raw.githubusercontent.com/multivoltage/track-board/master/src/data.json';
+import { Icon, Container, Dimmer, Loader, Divider, Label } from 'semantic-ui-react';
 
 export default class EntityDetails extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      entitiy: {}
+      entitiy: null
     };
   }
 
@@ -23,14 +23,37 @@ export default class EntityDetails extends Component {
   }
 
   render() {
+
+    if(!this.state.entitiy){
       return (
-        <div className="entitiy-details">
-          <Link to='/'>
-            <span className="close">X</span>
-            <span>entity: {this.state.entitiy.title}</span>
-          </Link>
-        </div>
+          <Dimmer active="true">
+            <Loader size='massive'>Loading entitiy</Loader>
+          </Dimmer> 
       );
+    }
+
+    // else 
+    return (
+        <div className="entitiy-details">
+          <Container>
+            <header>
+              <h1>
+                <Label color={this.state.entitiy.type === 'userstory' ? 'blue' : 'red'}>
+                  {this.state.entitiy.type.toUpperCase()}
+                </Label>
+                <span className="id">#{this.state.entitiy.id}</span>
+                <span> | </span>
+                <span className="title">{this.state.entitiy.title}</span>
+              </h1>             
+            </header>
+            <Divider />   
+            
+            <p className="description">
+              {this.state.entitiy.description}
+            </p>
+          </Container>          
+        </div>
+    );
   }
 }
 

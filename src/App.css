@@ -59,3 +59,15 @@
     border-left: 3px solid #F44336; }
   .states-group .entity.userstory {
     border-left: 3px solid #03A9F4; }
+
+.entitiy-details {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  .entitiy-details header h1 {
+    font-size: large; }
+    .entitiy-details header h1 .id,
+    .entitiy-details header h1 .title {
+      color: #009688;
+      font-weight: bold; }
+    .entitiy-details header h1 .id {
+      margin-left: 1em; }

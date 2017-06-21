@@ -7,9 +7,9 @@ export default class Entity extends Component {
 
     let classes = "entity ";
     classes += this.props.type;
-    
+    let link = '/entities/'+this.props.id;
     return (
-      <Link to='/entities/1'>
+      <Link to={link}>
       <Card className={classes}>
         <Card.Content>
           <Image floated='right' size='mini' src={this.props.fullUser.avatar_url} />
