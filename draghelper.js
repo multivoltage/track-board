@@ -1,4 +1,7 @@
-let container = document.querySelector('.state-container--list');
+// https://stackoverflow.com/questions/8960193/how-to-make-html-element-resizable-using-pure-javascript 
+setTimeout(() => {
+
+let container = document.querySelector('.state-container');
 //container.addEventListener('click',function init() {
     //container.removeEventListener('click',init,false);
      container.className = container.className + ' resizable';
@@ -21,13 +24,16 @@ function initDrag(e) {
 
 function doDrag(e) {
     container.style.width = (startWidth + e.clientX - startX) + 'px';
-    container.style.height = (startHeight + e.clientY - startY) + 'px';
+    //container.style.height = (startHeight + e.clientY - startY) + 'px';
  }
 
 function stopDrag(e) {
      document.documentElement.removeEventListener('mousemove', doDrag, false);   
      document.documentElement.removeEventListener('mouseup', stopDrag, false);
 }
+
+},3000);
+
 
 /** TODO convert to es6 module  */
 // const helper = {
