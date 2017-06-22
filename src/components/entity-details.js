@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Icon, Container, Dimmer, Loader, Divider, Label, Button } from 'semantic-ui-react';
+import { Icon, Container, Dimmer, Loader, Divider, Label, Button, TextArea, Form } from 'semantic-ui-react';
 import TabsLayout from './tabs-layout';
+import SharePopup from './share_popup';
+import TabDescription from './tab_description';
 
 export default class EntityDetails extends Component {
 
@@ -33,7 +35,6 @@ export default class EntityDetails extends Component {
       );
     }
 
-    // else 
     return (
         <div className="entitiy-details">
           <Container>
@@ -45,15 +46,13 @@ export default class EntityDetails extends Component {
                 <span className="id">#{this.state.entitiy.id}</span>
                 <span> | </span>
                 <span className="title">{this.state.entitiy.title}</span>
-              </h1>             
+              </h1>
+              <SharePopup sharable={window.location.href} />             
             </header>
             <Divider />   
             <TabsLayout tabs={["Description","Flow","History"]} selected="Description">
-              <Container className="description"  tab="Description">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
-              </Container>
-              <Button tab="Flow">tab2</Button>
-              <Button tab="History">tab3</Button>
+              <TabDescription tab="Description"/>
+              <span>{/* with a single child TabsLayout does not render, I dont know why*/}</span>
             </TabsLayout>
           </Container>          
         </div>

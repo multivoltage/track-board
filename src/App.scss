@@ -90,6 +90,8 @@ $tab-selected: #EEEEEE;
   padding-bottom: 1em;
   
   header {
+    position:  relative;
+
     h1 {
       font-size: large;
 
@@ -102,6 +104,12 @@ $tab-selected: #EEEEEE;
       .id {
         margin-left: 1em;
       }
+    }
+
+    .share-popup {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 }
@@ -129,8 +137,37 @@ $tab-selected: #EEEEEE;
   .contents {
     margin-top: .8em;
     
-    .description {
-      line-height: 1.5em;
+    .tab-description {
+      position: relative;
+      
+      textarea {
+        margin-top: 40px;
+        line-height: 1.5em;
+        width: 100%;
+        max-width: 100%;
+        min-height: 300px;
+        border-radius: 4px;
+        padding: 1em;
+
+        &[disabled] {
+          background-color: transparent;
+          border: none;
+        }
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        color: white;
+
+        &.edit {
+          background-color: green;
+        }
+        
+        &.save {
+          background-color: red;
+        }
+      }
     }
   }
 }

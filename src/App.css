@@ -63,14 +63,20 @@
 .entitiy-details {
   padding-top: 1em;
   padding-bottom: 1em; }
-  .entitiy-details header h1 {
-    font-size: large; }
-    .entitiy-details header h1 .id,
-    .entitiy-details header h1 .title {
-      color: #009688;
-      font-weight: bold; }
-    .entitiy-details header h1 .id {
-      margin-left: 1em; }
+  .entitiy-details header {
+    position: relative; }
+    .entitiy-details header h1 {
+      font-size: large; }
+      .entitiy-details header h1 .id,
+      .entitiy-details header h1 .title {
+        color: #009688;
+        font-weight: bold; }
+      .entitiy-details header h1 .id {
+        margin-left: 1em; }
+    .entitiy-details header .share-popup {
+      position: absolute;
+      right: 0;
+      top: 0; }
 
 .tablayout .tabs {
   display: flex;
@@ -86,5 +92,24 @@
 
 .tablayout .contents {
   margin-top: .8em; }
-  .tablayout .contents .description {
-    line-height: 1.5em; }
+  .tablayout .contents .tab-description {
+    position: relative; }
+    .tablayout .contents .tab-description textarea {
+      margin-top: 40px;
+      line-height: 1.5em;
+      width: 100%;
+      max-width: 100%;
+      min-height: 300px;
+      border-radius: 4px;
+      padding: 1em; }
+      .tablayout .contents .tab-description textarea[disabled] {
+        background-color: transparent;
+        border: none; }
+    .tablayout .contents .tab-description button {
+      position: absolute;
+      right: 0;
+      color: white; }
+      .tablayout .contents .tab-description button.edit {
+        background-color: green; }
+      .tablayout .contents .tab-description button.save {
+        background-color: red; }
