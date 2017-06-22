@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimmer, Loader } from 'semantic-ui-react'
+import { Dimmer, Loader, Search } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import logo from '../logo.svg';
 import './../App.css';
@@ -9,6 +9,15 @@ import StateContainer from './state-container';
 
 const STATES = ["progress","testing","done"];
 
+const queryMatchEntity = (entity,query) => {
+  if(!query || query.trim() === '')
+    return true;
+
+  return entity.title.includes(query) ||
+         entity.description.includes(query) ||
+         entity.reporter.includes(query);
+}
+
 export default class Home extends Component {
 
   constructor(props){
@@ -17,7 +26,8 @@ export default class Home extends Component {
     this.state = {
       stateLayout: 'colum',
       entities: [],
-      users: []
+      users: [],
+      query: ""
     };
   }
   renderStateColums(){
@@ -25,7 +35,9 @@ export default class Home extends Component {
     return STATES.map((state) => {
       return (
         <StateContainer key={STATES.indexOf(state)} state={state}
-            entities={this.state.entities.filter((entity) => { return entity.state === state })}
+            entities={this.state.entities.filter((entity) => { return entity.state === state }).filter((entity) => {
+              return queryMatchEntity(entity,this.state.query);
+            })}
             users={this.state.users} />
       );
     });
@@ -43,7 +55,6 @@ export default class Home extends Component {
 
   render() {
 
-
     return (
       <div className="App">
         <Dimmer active={this.state.entities.length === 0} inverted>
@@ -54,10 +65,20 @@ export default class Home extends Component {
           <h2>Welcome to Track Board</h2>
           <p>This is a sample of track board like TargetProcess</p>
         </div>
+        <div className="search-container">
+        <Search
+            onResultSelect={this.handleResultSelect}
+            onSearchChange={this.handleSearchChange.bind(this)}
+            results={this.state.entities.filter((entity) => entity.title.includes(this.state.query))} />
+        </div>
         <div className="states-group">
           {this.renderStateColums()}
         </div>
       </div>
     );
+  }
+
+  handleSearchChange(e,value){
+    this.setState({query: value});
   }
 }

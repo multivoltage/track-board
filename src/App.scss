@@ -22,6 +22,12 @@ $tab-selected: #EEEEEE;
   to { transform: rotate(360deg); }
 }
 
+.search-container {
+  margin: 0 auto;
+  background: $primary-color;
+  padding: 1em;
+}
+
 .states-group {
   display: flex;
   flex-direction: row;
@@ -161,11 +167,11 @@ $tab-selected: #EEEEEE;
         color: white;
 
         &.edit {
-          background-color: green;
+          background-color: $primary-color;
         }
         
         &.save {
-          background-color: red;
+          background-color: #2196F3;
         }
       }
     }
