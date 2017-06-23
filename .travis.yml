@@ -1,0 +1,9 @@
+language: node_js
+cache:
+  directories:
+    - "node_modules"
+node_js:
+  - "iojs"
+  - "6.10.0"
+script:
+  - npm run build
