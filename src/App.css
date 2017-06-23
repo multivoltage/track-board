@@ -16,6 +16,11 @@
   to {
     transform: rotate(360deg); } }
 
+.search-container {
+  margin: 0 auto;
+  background: #009688;
+  padding: 1em; }
+
 .states-group {
   display: flex;
   flex-direction: row;
@@ -110,6 +115,6 @@
       right: 0;
       color: white; }
       .tablayout .contents .tab-description button.edit {
-        background-color: green; }
+        background-color: #009688; }
       .tablayout .contents .tab-description button.save {
-        background-color: red; }
+        background-color: #2196F3; }
