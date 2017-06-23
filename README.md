@@ -1,6 +1,31 @@
-[![Build Status](https://api.travis-ci.org/multivoltage/track-board.svg?branch=master)]
+ 
 
-(https://travis-ci.org/multivoltage/track-board)
+[![Build Status](https://api.travis-ci.org/multivoltage/track-board.svg?branch=master)](https://travis-ci.org/multivoltage/track-board)
+
+# What is it
+This is my first react app. I wanted to implement an example of kanban board with all concepts learn in about 2 weeks. I want to advise you about something before you check my repo:
+
+
+- Solutions proposed by me are not the best possible solutions. Sure there are pattern more efficently and wat to to component in a easier method
+- I like semantic ui react instead material ui, because this last one has too much inline style
+- I know Redux exist but for the moment I prefer manage state in each components
+___
+
+## Demo  [https://multivoltage.github.io/track-board/#/](https://multivoltage.github.io/track-board/#/)
+
+# Architecture
+This react app was build thanks to **create-react-app** developer by **facebook**. You can also read all about this library at the botton of this file.
+
+----
+
+# How to run project
+```sh
+$ npm install
+$ npm run start // this run server on localhost:3000
+$ npm run watch-css // this run sass watch
+```
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -1902,3 +1927,6 @@ This will only work for locales that have been explicitly imported before.
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
+
+
+
