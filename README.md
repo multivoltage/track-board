@@ -1,3 +1,6 @@
+[![Build Status](https://api.travis-ci.org/multivoltage/track-board.svg?branch=master)]
+
+(https://travis-ci.org/multivoltage/track-board)
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

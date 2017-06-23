@@ -32,9 +32,9 @@ export default class Home extends Component {
   }
   renderStateColums(){
 
-    return STATES.map((state) => {
+    return STATES.map((state,index) => {
       return (
-        <StateContainer key={STATES.indexOf(state)} state={state}
+        <StateContainer key={index} state={state}
             entities={this.state.entities.filter((entity) => { return entity.state === state }).filter((entity) => {
               return queryMatchEntity(entity,this.state.query);
             })}

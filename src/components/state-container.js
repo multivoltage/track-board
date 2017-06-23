@@ -14,7 +14,7 @@ export default class StateContainer extends Component {
     return this.props.entities.map((entity,index) => {      
       return (
             <Entity 
-                key={entity.id}
+                key={index}
                 id={entity.id}
                 title={entity.title}
                 description={entity.description}
